@@ -1,0 +1,7 @@
+/* @import "/node_modules/bulma/css/bulma.css"; */
+
+
+
+.navbar-item:hover{
+    background-color:grey !important;
+}

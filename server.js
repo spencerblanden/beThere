@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const homeController = require('./controllers/index.js');
 const placeController = require('./controllers/places.js');
+const eventController = require('./controllers/events.js')
 const mongoose = require('mongoose');
 
 require('dotenv').config()
@@ -18,7 +19,7 @@ db.on("disconnected", ()=> console.log("mon no go"))
 
 
 //middleware
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended:false }))
 
 
@@ -26,6 +27,7 @@ app.use(express.urlencoded({ extended:false }))
 //routes
 app.use('/', homeController)
 app.use('/places', placeController)
+app.use('/events', eventController)
 
 
 
