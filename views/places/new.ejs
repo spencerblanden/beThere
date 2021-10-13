@@ -6,9 +6,11 @@
 </head>
     <body>
         <%- include('../partials/header.ejs')%>
+        <div class='box'>
+        <div class='control has-text-centered'>
 		<h1>Add a place</h1>
 		<form action="/places" method="POST">
-			Title: <input type="text" name="name" /><br />
+		 <input class='input' placeholder="Place Title" type="text" name="name" /><br />
 			Image Link: <input type="text" name="img" /><br />
             Description: <input type="text" name="description"/><br />
             Address: <input type="text" name="address"/><br />
@@ -16,6 +18,8 @@
             Tags: <input type="text" name="tags"/><br />
 			<input type="submit" name="" value="Add Place" />
 		</form>
+    </div>
+</div>
 	</body>
 
 </html>

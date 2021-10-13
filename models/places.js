@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const eventSchema = new Schema({
-    place: Object,
-    creator: Object, 
+   
+    creator:  {type: Schema.Types.ObjectId, ref: "User"} ,
     time: String,
     attendees: Array, 
     there: Array
@@ -14,7 +14,7 @@ const placeSchema = new Schema({
     name: String, 
     img: String,
     address: String,
-    creator: String,
+    creator: {type: Schema.Types.ObjectId, ref: "User"},
     description: String,
     events: [eventSchema],
     type: String,

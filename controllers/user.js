@@ -20,7 +20,7 @@ router.post('/login', (req, res) => {
         const isMatched = bcrypt.compareSync(req.body.password, foundUser.password);
 
         if(!isMatched) {
-            return res.render('user/login.ejs', {error: 'Invalid Credentials', user: req.session.user});
+            return res.render('user/login.ejs', {error: 'Invalid password', user: req.session.user});
         }
 
         req.session.user = foundUser._id;
