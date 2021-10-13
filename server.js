@@ -3,7 +3,9 @@ const app = express();
 const homeController = require('./controllers/index.js');
 const placeController = require('./controllers/places.js');
 const eventController = require('./controllers/events.js')
+const usersController = require('./controllers/user.js');
 const mongoose = require('mongoose');
+const expressSession = require('express-session')
 
 require('dotenv').config()
 mongoose.connect(process.env.DATABASE_URL)
@@ -21,6 +23,11 @@ db.on("disconnected", ()=> console.log("mon no go"))
 //middleware
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended:false }))
+app.use(expressSession({
+    secret: 'gsfgrtdfsdf',
+    resave: false,
+    saveUninitialized: false
+}))
 
 
 
@@ -28,6 +35,7 @@ app.use(express.urlencoded({ extended:false }))
 app.use('/', homeController)
 app.use('/places', placeController)
 app.use('/events', eventController)
+app.use('/', usersController);
 
 
 

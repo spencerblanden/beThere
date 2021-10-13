@@ -1,0 +1,42 @@
+<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+    
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/bethere.png"  >
+      </a>
+  
+      <a role="button" class="navbar-burger " aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu" class="navbar-start">
+        <a class="navbar-item has-text-dark">
+          Home
+        </a>
+  
+        <a class="navbar-item has-text-dark" href='/places'>
+          places
+        </a>
+  
+          <a class="navbar-item has-text-dark" href='/events'>
+            events
+          </a>
+          <% if(user) { %>
+            <a href="/logout" class="navbar-item has-text-dark">
+               logout
+              </a>
+        <% } else { %>
+            <a href="/login"class="navbar-item has-text-dark">
+                login
+            </a>
+            <a href="/signup" class="navbar-item has-text-dark">
+                Sign up
+            </a>
+        <% } %>
+  
+      </div>
+    
+  </nav>

@@ -5,25 +5,25 @@ const eventSeed = require('../models/eventSeed');
 
 
 
-router.get("/eventseed", (req, res) => {
-        Events.deleteMany({}, (error, allEvents) => {})
-        
-        Events.create(eventSeed, (error, data) => {
-            res.redirect('/events')
-        }) })
+
 
 
 router.get('/', (req,res) => {
     Events.find({}, (error, events) => {
     
-        res.render("./events/index.ejs", {events})
+        res.render("./events/index.ejs", {
+            events,
+            user: req.session.user
+        })
         
     })
 });
 
 router.get('/new', (req,res) => {
     Events.find({}, (error, events) => {
-        res.render('./events/new.ejs', {events})
+        res.render('./events/new.ejs', {events,
+            user: req.session.user
+        })
     })
 })
 
@@ -39,6 +39,7 @@ router.get("/:id", (req,res) => {
         console.log(event)
     res.render('./events/show.ejs', {
         event: event,
+        user: req.session.user
     }) 
     })
 })

@@ -5,3 +5,25 @@
 .navbar-item:hover{
     background-color:grey !important;
 }
+a {
+   color: white !important;
+   font-weight:bold;
+}
+
+.headerTag{
+    height:200px;
+    margin-left: 15px;
+}
+
+.navbar-burger{
+    color:teal !important;
+}
+
+.hero-text {
+    margin:0;
+}
+
+#hero{
+   width: 300px;
+   margin-top: 0;
+}

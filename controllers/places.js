@@ -6,13 +6,15 @@ const placeSeed = require('../models/placeSeed');
 
 router.get('/', (req,res) => {
     Places.find({}, (error, places) => {
-        res.render("./places/index.ejs", {places})
+        res.render("./places/index.ejs", {places,
+            user: req.session.user})
     })
 });
 
 router.get('/new', (req,res) => {
     Places.find({}, (error, places) => {
-        res.render('./places/new.ejs', {places})
+        res.render('./places/new.ejs', {places,
+            user: req.session.user})
     })
 })
 
@@ -27,6 +29,7 @@ router.get("/:id/edit", (req, res) => {
     Book.findById(req.params.id, (error, foundBook) => {
         res.render("edit.ejs", {
             book: foundBook,
+            user: req.session.user
         })
     })
 })
@@ -35,6 +38,7 @@ router.get("/:id", (req,res) => {
     Places.findById(req.params.id, (err, place) => {
     res.render('./places/show.ejs', {
         place: place,
+        user: req.session.user
     }) 
     })
 })
