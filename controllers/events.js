@@ -1,7 +1,7 @@
 const express = require("express");
-const Events = require("../models/events");
+const Places = require("../models/places");
 const router = express.Router();
-const eventSeed = require('../models/eventSeed');
+
 
 
 
@@ -9,10 +9,10 @@ const eventSeed = require('../models/eventSeed');
 
 
 router.get('/', (req,res) => {
-    Events.find({}, (error, events) => {
+    Places.find({}, (error, place) => {
     
         res.render("./events/index.ejs", {
-            events,
+            place,
             user: req.session.user
         })
         
@@ -20,7 +20,7 @@ router.get('/', (req,res) => {
 });
 
 router.get('/new', (req,res) => {
-    Events.find({}, (error, events) => {
+    Places.find({}, (error, events) => {
         res.render('./events/new.ejs', {events,
             user: req.session.user
         })
@@ -29,13 +29,13 @@ router.get('/new', (req,res) => {
 
 router.post("/", (req, res) => {
    
-    Events.create(req.body, (err, event) => {
+    Places.create(req.body, (err, event) => {
         res.redirect("./events")
     })
 });
 
 router.get("/:id", (req,res) => {
-    Events.findById(req.params.id, (err, event) => {
+    Places.findById(req.params.id, (err, event) => {
         console.log(event)
     res.render('./events/show.ejs', {
         event: event,

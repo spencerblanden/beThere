@@ -27,3 +27,6 @@ a {
    width: 300px;
    margin-top: 0;
 }
+.input {
+    max-width: 300px;
+}

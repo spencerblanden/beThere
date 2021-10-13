@@ -6,10 +6,37 @@
 </head>
 <%- include('../partials/header.ejs')%>
 <body>
+<div class='columns is-centered'>
+    <div class='column is-centered ml-6'>
+        <div class='is-size-1 my-3'> <%=place.name %> </div>
+        <div class='subtitle '><%=place.description %></div>
+        <div class='subtitle mt-6'>Location: <%=place.address %> </div>
+        <div class='subtitle'>Tags:<%=place.tags %></div>
+        <div class='column my-6'>
+           <div> 
+            Events: <% place.events.forEach(e => { %>
+            <div> <%=  e.name %> </div>
+            <div><%=  e.day %></div>
+            <div> <%=  e.time %> </div>
+        
+        
+        <% }) %>
+        </div>
+            <a class='button is-success' href="/places/<%= place._id %>/edit">Edit</a>
+           <div> <%=place.creator %> </div>
 
-        <li>
-            <%=place.name %> 
-            </li>
+        </div>
+    </div>
+    <div class='column mr-6 is-centered'>
+        <div class='card'><img src="<%=place.img %>" alt="">  </div>
+        <div class='is-centered'><form action="/places/<%=place.id %>?_method=DELETE" method="POST">
+            <input class='button is-danger' type="submit" value="DELETE this Place" />
+        </form></div>
+    </div>
+    <div class='columns'>
+       
+    </div>
+</div>
    
 </body>
 </html>

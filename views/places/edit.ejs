@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')%>
+    <title>Document</title>
+</head>
+    <body>
+        <%- include('../partials/header.ejs')%>
+        <div class='card'>
+            <div class='field'>
+        <div class='control has-text-centered'>
+		<div class='is-size-3'>Add a place</div>
+        <form action="/places/<%=place._id%>?_method=PUT" method="POST">
+		 <input class='input' placeholder="<%= place.name %>" type="text" name="name" /><br />
+		<input class='input' placeholder="<%= place.img %>" type="text" name="img" /><br />
+           <input class='input' placeholder="<%= place.description %>" type="text" name="description"/><br />
+             <input class='input' placeholder="<%= place.address %>" type="text" name="address"/><br />
+             <input class='input' placeholder="<%= place.type %>" type="text" name="type"/><br />
+            <input class='input' placeholder="<%= place.tags %>" type="text" name="tags"/><br />
+			<input class='button is-success' type="submit" name="" value="Update Place" />
+		</form>
+    </div>
+</div>
+</div>
+	</body>
+
+</html>
+</body>
+</html>

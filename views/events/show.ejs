@@ -5,11 +5,27 @@
     <title>Document</title>
 </head>
 <body>
-    <%- include('../partials/header.ejs')%>
-
-        <li>
-            <%=event.place %> 
-            </li>
-   
+    <div class='columns is-centered'>
+        <div class='column is-centered ml-6'>
+            <div class='is-size-1 my-3'> <%=place.events[0].name %> </div>
+            <div class='subtitle '> At: <%=place.name %></div>
+            <div class='subtitle mt-6'>Location: <%=place.address %> </div>
+            <div class='subtitle'>Time:<%=place.events[0].time %></div>
+            <div class='column my-6'>
+               <div> Events: <%=  place.events[0].name %> </div>
+                <a class='button is-success' href="/places/<%= place._id %>/edit">Edit</a>
+               <div> <%=place.creator %> </div>
+            </div>
+        </div>
+        <div class='column mr-6 is-centered'>
+            <div class='card'><img src="<%=place.img %>" alt="">  </div>
+            <div class='is-centered'><form action="/places/<%=place.id %>?_method=DELETE" method="POST">
+                <input class='button is-danger' type="submit" value="DELETE this Place" />
+            </form></div>
+        </div>
+        <div class='columns'>
+           
+        </div>
+    </div>
 </body>
 </html>
