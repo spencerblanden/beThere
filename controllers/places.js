@@ -60,7 +60,17 @@ router.get('/', (req,res) => {
                 }) 
             })
         })
- 
+        
+        router.get("/:id/events/:eid", (req,res) => {
+            Places.findById(req.params.id, (err,place) => {
+                res.render('./events/show.ejs', {
+                    place: place,
+                    event: place.events[req.params.eid],
+                    user: req.session.user
+                })
+                })
+            })
+    
        
         
         module.exports = router;

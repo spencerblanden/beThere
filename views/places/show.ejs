@@ -20,10 +20,10 @@
         <div class='subtitle'>Tags:<%=place.tags %></div>
         <div class='column my-6'>
            <div> 
-               <% const ev =place.events %>
-            <%ev.forEach(e => { %>
+               <% const ev = place.events %>
+            <%Array.from(place.events).forEach((e,id) => { %>
                 <div class='box'>
-                    <a class='has-text-dark' href='/events/<%= e._id %>'>
+                    <a class='has-text-dark' href='<%= place._id %>/events/<%= id%>'>
                     <div class='has-text-weight-bold'> <%=  e.name %> </div>
                      <div>Day: <%= e.day  %></div>
                     <div> Time: <%=  e.time %> </div>
@@ -38,9 +38,9 @@
     </div>
     <div class='column mr-6 is-centered'>
         <div class='card'><img src="<%=place.img %>" alt="">  </div>
-        <div class='box is-transparent'></div>
-        <a class='button is-success' href="/places/<%= place._id %>/edit">Edit this Place</a>
-        <div class='is-centered'><form action="/places/<%=place.id %>?_method=DELETE" method="POST">
+        <div class='block my-6'></div>
+        <div class='has-text-centered'><a class='button is-success' href="/places/<%= place._id %>/edit">Edit this Place</a></div> </br>
+        <div class='has-text-centered'><form action="/places/<%=place.id %>?_method=DELETE" method="POST">
             <input class='button is-danger is-inline' type="submit" value="DELETE this Place" />
         </form></div>
     </div>

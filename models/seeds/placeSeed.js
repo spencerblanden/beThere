@@ -31,13 +31,22 @@ module.exports = [
     address: 'Co Rd 200, Liberty Hill, TX 78642',
     creator: '6166cdc4c3b6b2a176b04425',
     description: 'Outdoor basketball court.',
-    events: {
+    events: [{
         name: 'wednesday pick up',
-        creator: '6166cdc4c3b6b2a176b04425',
+        day: "Wednesday",
         time: '5',
+        creator: '6166cdc4c3b6b2a176b04425',
         attendees: ["What", "am", "I", "Doing"], 
         there: ["What", "am", "I", "Doing"]
     },
+    { 
+        name: 'Tuesday Debugging Session',
+        day: 'Tuesday',
+        time: '5',
+        creator: '6166cdc4c3b6b2a176b04425',
+        attendees: ["What", "am", "I", "Doing"], 
+        there: ["What", "am", "I", "Doing"],  
+    }],
     type: 'city park',
     tags: ['basketball', 'park', 'pickup']
    } 

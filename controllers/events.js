@@ -37,7 +37,7 @@ router.post("/", (req, res) => {
 });
 
 router.get("/:id", (req,res) => {
-   Places.find(req.params.events, (err, place) => {
+   Places.find(req.params.id, (err, place) => {
        console.log(place)
             res.render('./events/show.ejs', {
                 place,
