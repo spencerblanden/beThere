@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')%>
+    <title>Document</title>
+</head>
+<%- include('../partials/header.ejs')%>
+<body class= 'bg-img'>
+	<div class="hero is-fullheight is-primary has-background">
+		<img alt="filler" class="hero-background " src="/bg.png" />
+		<div class="hero-body">
+		  <div class="container">
+<div class='columns '>
+	<div class='column has-text-centered'>
+		<h1 class='title'>Add an Event</h1>
+		<form action="/events/<%=place._id%>?_method=PUT" method="POST">
+			Name: <input type="text" name="name" /><br />
+            Day: <input type="text" name="day" /><br />
+			Time: <input type="text" name="time" /><br />
+			<div class='block'></div>
+			<input class='button is-primary'type="submit" name="" value="Add Event" />
+		</form>
+	</div>
+</div>
+		  </div>
+		</div>
+	</div>
+	</body>
+</html>
+</body>
+</html>

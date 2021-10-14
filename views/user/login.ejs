@@ -4,14 +4,19 @@
     <%- include('../partials/head.ejs')%>
     <title>Document</title>
 </head>
-<body>
-    <%- include('../partials/header.ejs')%>
-    <h1>Login</h1>
+<%- include('../partials/header.ejs')%>
+<body class= 'bg-img'>
+    <div class="hero is-fullheight is-primary has-background">
+        <img alt="filler" class="hero-background " src="/bg.png" />
+        <div class="hero-body">
+          <div class="container">
+    <div class='column is-centered text-is-centered'>
+    <div class= 'title'>Login</div>
     <% if(error) { %>
         <p style="color: red;"><%= error %></p>
     <% } %>
     <p>Please Enter Your Credentials To Login</p>
-    <form action="/user/login" method="POST" autocomplete="off">
+    <form action="/login" method="POST" autocomplete="off">
         <label>Username:
             <input type="text" name="username" required>
         </label><br>
@@ -20,5 +25,6 @@
         </label><br>
         <input type="submit" value="Login">
     </form>
+</div>
 </body>
 </html>

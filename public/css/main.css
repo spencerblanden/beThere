@@ -23,9 +23,13 @@ a {
     margin:0;
 }
 
-#hero{
-   width: 300px;
-   margin-top: 0;
+.is-medium{
+   opacity: .9;
+   background-color: rgb(250,250,250,.3) !important;
+}
+#hero-text{
+    color: black;
+    opacity: 1.0;
 }
 .input {
     max-width: 300px;

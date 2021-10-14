@@ -42,6 +42,7 @@
         <div class='has-text-centered'><a class='button is-success' href="/places/<%= place._id %>/edit">Edit this Place</a></div> </br>
         <div class='has-text-centered'><form action="/places/<%=place.id %>?_method=DELETE" method="POST">
             <input class='button is-danger is-inline' type="submit" value="DELETE this Place" />
+            <div class='has-text-centered'><a class='button is-success' href="/events/<%= place._id %>/edit">Add an Event</a></div>
         </form></div>
     </div>
     <div class='columns'>
