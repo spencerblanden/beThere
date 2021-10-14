@@ -12,27 +12,28 @@
               <img class='headerTag' src="/Places2.png" >
             </div> 
         <div class= 'columns'>
-            <%events.forEach(e => { %>
+            <%=place.event%>
+
                 <div class='column is-half is-size-5 has-text-black m-auto'>
                     <div class='column'>
                         <div class="card">
                             <header class='card-header'>
                                 <p class="card-header-title">
-                                    <%=e.events[0].name %> At <%=e.name %>
+                                
                                 </p></header>
                                 <div class="card-image">
                                     <figure class="image is-4by3">
-                                        <img src="<%= e.img %>" alt="Placeholder image">
+                                    
                                     </figure>
                                 </div>
                                 <div class="card-content is-overlay mt-6">
-                                    <span class="tag is-primary"><%= e.type %></span>
+                                   
                                 </div>
                             </div>
                             
                         </div> 
                     </div>
-                    <% }) %>
+            
                     
                     
                     

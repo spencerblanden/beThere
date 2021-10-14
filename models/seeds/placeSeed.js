@@ -15,7 +15,7 @@ module.exports = [
         there: ["What", "am", "I", "Doing"],  
     },
     {
-        name: 'Tuesday Debugging Session',
+        name: 'Wednesday Debugging Session',
         day: 'Tuesday',
         time: '5',
         creator: '6166cdc4c3b6b2a176b04425',

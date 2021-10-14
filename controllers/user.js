@@ -25,7 +25,7 @@ router.post('/login', (req, res) => {
 
         req.session.user = foundUser._id;
 
-        res.redirect('/dashboard')
+        res.redirect('/user/dashboard')
     });
 });
 
@@ -40,7 +40,7 @@ router.post('/signup', (req, res) => {
 
   User.create(req.body, (err, user) => {
       req.session.user = user._id
-      res.redirect('/dashboard');
+      res.redirect('/user/dashboard');
   });
 });
 

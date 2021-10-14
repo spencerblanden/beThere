@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="/css/main.css">
     <title>Document</title>
 </head>
-<body>
+
     <%- include('./partials/header.ejs')%>
+    <body class= 'bg-img'>
+        <div class="hero is-fullheight is-primary has-background">
+            <img alt="filler" class="hero-background " src="/bg.png" />
+            <div class="hero-body">
+              <div class="container">
      <main >
         <section class="hero is-medium is-link mb-5">
             <div class="hero-body">
@@ -62,16 +67,13 @@
         </div>
         </div>
 
-
-     </main>
-
-    <!-- <main class='main'>
-        <%places.forEach(p => { %>
-            <li>
-                <a href="/<%= p._id %>"> <%=p.name %> </a>
-                </li>
-        <% }) %> -->
-
     </main>
+
+    </div>
+            </div>
+        </div>
+        
+
+
 </body>
 </html>

@@ -55,10 +55,12 @@ router.get('/', (req,res) => {
         router.get("/:id", (req,res) => {
             Places.findById(req.params.id, (err, place) => {
                 res.render('./places/show.ejs', {
-                    place,
+                    place: place,
                     user: req.session.user
                 }) 
             })
         })
+ 
+       
         
         module.exports = router;

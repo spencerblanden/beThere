@@ -34,10 +34,10 @@ app.use(methodOverride("_method"))
 
 
 //routes
-app.use('/home', homeController)
+app.use('/', homeController)
 app.use('/places', placeController)
 app.use('/events', eventController)
-app.use('/', usersController);
+app.use('/user', usersController);
 
 const placeSeed = require('./models/seeds/placeSeed.js');
 const Places = require("./models/places");

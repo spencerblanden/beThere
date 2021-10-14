@@ -1,5 +1,7 @@
 const express = require("express");
 const Places = require("../models/places");
+
+
 const router = express.Router();
 
 
@@ -35,13 +37,14 @@ router.post("/", (req, res) => {
 });
 
 router.get("/:id", (req,res) => {
-    Places.findById(req.params.id, (err, event) => {
-        console.log(event)
-    res.render('./events/show.ejs', {
-        event: event,
-        user: req.session.user
+   Places.find(req.params.events, (err, place) => {
+       console.log(place)
+            res.render('./events/show.ejs', {
+                place,
+                user: req.session.user
+            })
     }) 
     })
-})
+
 
 module.exports = router;

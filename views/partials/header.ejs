@@ -21,18 +21,15 @@
           places
         </a>
   
-          <a class="navbar-item has-text-dark" href='/events'>
-            events
-          </a>
           <% if(user) { %>
-            <a href="/logout" class="navbar-item has-text-dark">
+            <a href="/user/logout" class="navbar-item has-text-dark">
                logout
               </a>
         <% } else { %>
-            <a href="/login"class="navbar-item has-text-dark">
+            <a href="/user/login"class="navbar-item has-text-dark">
                 login
             </a>
-            <a href="/signup" class="navbar-item has-text-dark">
+            <a href="/user/signup" class="navbar-item has-text-dark">
                 Sign up
             </a>
         <% } %>
