@@ -15,11 +15,11 @@
         <div class='has-text-centered title'> 
             <img class='headerTag' src="/Places2.png" >
         </div> 
-        <div class= 'columns'>
+        <div class= 'columns is multiline is-centered'>
             <%places.forEach(p => { %>
-                <div class='column  is-size-5 has-text-black m-auto'>
-                    <div class=''>
-                        <div class="card"> 
+                <div class='column is-size-5 has-text-black m-auto is-centered'>
+                    <div class=' is-mobile'>
+                        <div class="card " id='main-card'> 
                             <a href='/places/<%= p._id %>'>
                             <header class='card-header'>
                                 <p class="card-header-title">
@@ -35,7 +35,7 @@
                                 </div>
                             </a>
                             </div>
-                            
+                            <div class='block my-6'></div>
                         </div> 
                     </div>
                     <% }) %>

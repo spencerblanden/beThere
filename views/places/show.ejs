@@ -20,6 +20,7 @@
         <div class='subtitle'>Tags:<%=place.tags %></div>
         <div class='column my-6'>
            <div> 
+               <div class="is-size-1">Events:</div>
                <% const ev = place.events %>
             <%Array.from(place.events).forEach((e,id) => { %>
                 <div class='box'>
@@ -37,12 +38,14 @@
         </div>
     </div>
     <div class='column mr-6 is-centered'>
+        <div class='block my-6'></div>
         <div class='card'><img src="<%=place.img %>" alt="">  </div>
         <div class='block my-6'></div>
+       
         <div class='has-text-centered'><a class='button is-success' href="/places/<%= place._id %>/edit">Edit this Place</a></div> </br>
+        <div class='has-text-centered'><a class='button is-success' href="/events/<%= place._id %>/edit">Add an Event</a></div> </br>
         <div class='has-text-centered'><form action="/places/<%=place.id %>?_method=DELETE" method="POST">
             <input class='button is-danger is-inline' type="submit" value="DELETE this Place" />
-            <div class='has-text-centered'><a class='button is-success' href="/events/<%= place._id %>/edit">Add an Event</a></div>
         </form></div>
     </div>
     <div class='columns'>

@@ -24,27 +24,33 @@ const router = express.Router();
 
 
 router.put('/:id', (req,res) => {
-    const newEvent = [{
+    if(!req.session.user) return res.redirect(`/places/${req.params.id}`)
+    const newEvent = {
         name: req.body.name,
         day: req.body.day,
         time: req.body.time,
-        creator: user,
-        attendees: [user],
-        there: [user]
-    }]
+        creator: req.session.user,
+        attendees: [req.session.user],
+        there: [req.session.user]
+    };
     Places.findById(req.params.id, (err, place) => {
-        Array.from(place.events).push(newEvent),
-            res.redirect(`./places/${req.params.id}`)
-        }
-        )
-    })
-    
-    router.get('/:id/edit', (req,res) => {
-        Places.find({}, (error, place) => {
-            res.render('./events/edit.ejs', {place,
-                user: req.session.user})
-            })
+        place.events.push(newEvent);
+        place.save(function(err) {
+            console.log(err)
+            console.log(place)
+            res.redirect(`/places/${place._id}`);
         })
+    })
+})
+
+
+router.get('/:id/edit', (req,res) => {
+    Places.findById(req.params.id, (error, place) => {
+    res.render('events/edit.ejs', {place,
+        user: req.session.user
+        })
+    })
+})
 
 // router.post("/", (req, res) => {
    

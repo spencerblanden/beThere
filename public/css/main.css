@@ -3,7 +3,7 @@
 
 
 .navbar-item:hover{
-    background-color:grey !important;
+    background-color:lightgrey !important;
 }
 a {
    color: white !important;
@@ -11,8 +11,9 @@ a {
 }
 
 .headerTag{
-    height:200px;
+    max-height:200px;
     margin-left: 15px;
+    min-height:100px;
 }
 
 .navbar-burger{
@@ -57,3 +58,10 @@ a {
     height: 100%; }
     .hero-background.is-transparent {
       opacity: 0.3; }
+
+
+      #main-card{
+          
+         
+          max-width: 600px;
+      }

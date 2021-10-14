@@ -13,21 +13,17 @@
     <div class='columns is-centered'>
         <div class='column is-centered ml-6'>
            
-            <div class='is-size-1 my-3'> <%= event.name  %> </div>
-            <div class='subtitle '> At: <%= place.name %></div>
-            <div class='subtitle mt-6'>Location: <%=  %> </div>
-            <div class='subtitle'>Time:<%= event.time %></div>
-            <div class='subtitle'>Day:<%= event.day %></div>
-            <div class='column my-6'>
-               <div> Events: <%=   %> </div>
-                <a class='button is-success' href="/places//edit">Edit</a>
-               <div> <%= %> </div>
-            </div>
+            <div class='is-size-1 my-3'>  <%= event.name  %> </div>
+            <div class='title'> At:  <%= place.name %></div>
+            <div class='subtitle mt-6'>Location:  <%= place.address %> </div>
+            <div class='subtitle'>Time:  <%= event.time %></div>
+            <div class='subtitle'>Day:  <%= event.day %></div>
+          
+           
         </div>
         <div class='column mr-6 is-centered'>
             <div class='card'><img src="<%=place.img%>" alt="">  </div>
-            <div class='is-centered'><form action="/places/<%= %>?_method=DELETE" method="POST">
-                <input class='button is-danger' type="submit" value="DELETE this Place" />
+            
             </form></div>
         </div>
         <div class='columns'>
