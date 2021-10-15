@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class='has-navbar-fixed-top' lang="en">
 <head>
     <%- include('../partials/head.ejs')%>
-    <title>Document</title>
+    <title><%= place.name %></title>
 </head>
 <%- include('../partials/header.ejs')%>
-<body class= 'bg-img'>
+<body class= 'bg-img '>
     <div class="hero is-fullheight is-primary has-background">
         <img alt="filler" class="hero-background " src="/bg.png" />
         <div class="hero-body">
           <div class="container">
            
          
-<div class='columns is-centered'>
-    <div class='column is-centered ml-6'>
+<div class='columns'>
+    <div class='column'>
         <div class='is-size-1 my-3'> <%=place.name %> </div>
         <div class='subtitle '><%=place.description %></div>
         <div class='subtitle mt-6'>Location: <%=place.address %> </div>
         <div class='subtitle'>Tags:<%=place.tags %></div>
-        <div class='column my-6'>
-           <div> 
+        <div class='columns'> 
+        <div class='column  '>
+            <div id='card-place'><img src="<%=place.img %>" alt="">  </div>
+           
+        </div>
+    </div>
+    </div>
+        <div class='column'>
                <div class="is-size-1">Events:</div>
                <% const ev = place.events %>
             <%Array.from(place.events).forEach((e,id) => { %>
@@ -33,15 +39,6 @@
         </div>
     <% }) %>
         
-        
-        </div>
-        </div>
-    </div>
-    <div class='column mr-6 is-centered'>
-        <div class='block my-6'></div>
-        <div class='card'><img src="<%=place.img %>" alt="">  </div>
-        <div class='block my-6'></div>
-       
         <div class='has-text-centered'><a class='button is-success' href="/places/<%= place._id %>/edit">Edit this Place</a></div> </br>
         <div class='has-text-centered'><a class='button is-success' href="/events/<%= place._id %>/edit">Add an Event</a></div> </br>
         <div class='has-text-centered'><form action="/places/<%=place.id %>?_method=DELETE" method="POST">

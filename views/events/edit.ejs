@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('../partials/head.ejs')%>
-    <title>Document</title>
+	<%- include('../partials/head.ejs')%>
+	<title>New Event</title>
 </head>
 <%- include('../partials/header.ejs')%>
-<body class= 'bg-img'>
+
+<body class='bg-img has-navbar-fixed-top">'>
 	<div class="hero is-fullheight is-primary has-background">
 		<img alt="filler" class="hero-background " src="/bg.png" />
 		<div class="hero-body">
-		  <div class="container">
-<div class='columns '>
-	<div class='column has-text-centered'>
-		<h1 class='title'>Add an Event</h1>
-		<form action="/events/<%=place._id%>?_method=PUT" method="POST">
-			Name: <input type="text" name="name" /><br />
-            Day: <input type="text" name="day" /><br />
-			Time: <input type="text" name="time" /><br />
-			<div class='block'></div>
-			<input class='button is-primary'type="submit" name="" value="Add Event" />
-		</form>
-	</div>
-</div>
-		  </div>
+			<div class="container">
+
+				<div class='columns is-centered'>
+					<div class='column is-centered is-half has-text-centered'>
+						<div class='card pb-2'>
+							<div>
+								<div class='control has-text-centered'>
+									<h1 class='title has-text-dark pt-2'>Add an Event</h1>
+									<form action="/events/<%=place._id%>?_method=PUT" method="POST">
+										<input class='input' placeholder="Name" type="text" name="name"
+											required /><br />
+										<div class='block my-2'></div>
+										<input class='input' placeholder="Date" type="text" name="date"
+											required /><br />
+										<div class='block my-2'></div>
+										<input class='input' placeholder="Time" type="text" name="time"
+											required /><br />
+										<div class='block my-2'></div>
+										<input class='button is-success' type="submit" value="Add Event" />
+										<div class='block my-2'></div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
 		</div>
 	</div>
-	</body>
+</body>
+
 </html>
 </body>
+
 </html>

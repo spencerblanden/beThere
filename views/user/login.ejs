@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/head.ejs')%>
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <%- include('../partials/header.ejs')%>
-<body class= 'bg-img'>
+
+<body class='bg-img has-navbar-fixed-top'>
     <div class="hero is-fullheight is-primary has-background">
         <img alt="filler" class="hero-background " src="/bg.png" />
         <div class="hero-body">
-          <div class="container">
-    <div class='column is-centered text-is-centered'>
-    <div class= 'title'>Login</div>
-    <% if(error) { %>
-        <p style="color: red;"><%= error %></p>
-    <% } %>
-    <p>Please Enter Your Credentials To Login</p>
-    <form action="/user/login" method="POST" autocomplete="off">
-        <label>Username:
-            <input type="text" name="username" required>
-        </label><br>
-        <label>Password:
-            <input type="password" name="password" required>
-        </label><br>
-        <input type="submit" value="Login">
-    </form>
-</div>
+            <div class="container">
+                <div class='columns is-centered'>
+                    <div class='column is-half has-text-centered'>
+                        <div class='card pb-2'>
+                            <div >
+                                <div class='control has-text-centered'>
+                                    <div class='is-size-3'>Login</div>
+                                    <% if(error) { %>
+                                    <p style="color: red;"><%= error %></p>
+                                    <% } %>
+                                    <form action="/user/login" method="POST" autocomplete="off">
+                                        <input class='input' placeholder="username" type="text" name="username"
+                                            required /><br />
+                                        <div class='block my-2'></div>
+                                        <input class='input' placeholder="password" type="password" name="password"
+                                            required /><br />
+                                        <div class='block my-2'></div>
+                                        <input class='button is-success' type="submit" value="login" />
+                                        <div class='block my-2'></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

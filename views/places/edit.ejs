@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/head.ejs')%>
-    <title>Document</title>
+    <title>Edit Place</title>
 </head>
-        <%- include('../partials/header.ejs')%>
-        <body class= 'bg-img'>
-            <div class="hero is-fullheight is-primary has-background">
-                <img alt="filler" class="hero-background " src="/bg.png" />
-                <div class="hero-body">
-                  <div class="container">
-        <div class='card'>
-            <div class='field'>
-        <div class='control has-text-centered'>
-		<div class='is-size-3'>Add a place</div>
-        <form action="/places/<%=place._id%>?_method=PUT" method="POST">
-		 <input class='input' placeholder="<%= place.name %>" type="text" name="name" /><br />
-		<input class='input' placeholder="<%= place.img %>" type="text" name="img" /><br />
-           <input class='input' placeholder="<%= place.description %>" type="text" name="description"/><br />
-             <input class='input' placeholder="<%= place.address %>" type="text" name="address"/><br />
-             <input class='input' placeholder="<%= place.type %>" type="text" name="type"/><br />
-            <input class='input' placeholder="<%= place.tags %>" type="text" name="tags"/><br />
-			<input class='button is-success' type="submit" name="" value="Update Place" />
-		</form>
-    </div>
-</div>
-</div>
-                  </div>
+<%- include('../partials/header.ejs')%>
+
+<body class='bg-img has-navbar-fixed-top'>
+    <div class="hero is-fullheight is-primary has-background">
+        <img alt="filler" class="hero-background " src="/bg.png" />
+        <div class="hero-body">
+            <div class="container">
+                <div class='card is-centered mx-auto' id='edit-place-card'>
+                    <div class='field'>
+                        <div class='control has-text-centered pb-2'>
+                            <div class='is-size-3'>Edit Place</div>
+                            <div class='is-size-5'>If you leave a space blank it will delete the original value.<br />
+                                Please edit all values or none.
+                            </div>
+                            <form action="/places/<%=place._id%>?_method=PUT" method="POST">
+                                <input class='input' placeholder="<%= place.name %>" type="text" name="name" /><br />
+                                <div class='block my-2'></div>
+                                <input class='input' placeholder="<%= place.img %>" type="text" name="img" /><br />
+                                <div class='block my-2'></div>
+                                <input class='input' placeholder="<%= place.description %>" type="text"
+                                    name="description" /><br />
+                                <div class='block my-2'></div>
+                                <input class='input' placeholder="<%= place.address %>" type="text"
+                                    name="address" /><br />
+                                <div class='block my-2'></div>
+                                <input class='input' placeholder="<%= place.type %>" type="text" name="type" /><br />
+                                <div class='block my-2'></div>
+                                <input class='input' placeholder="<%= place.tags %>" type="text" name="tags" /><br />
+                                <div class='block my-2'></div>
+                                <input class='button is-success' type="submit" name="" value="Update Place" />
+                                <div class='block my-2'></div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-	</body>
+        </div>
+    </div>
+</body>
 
 </html>
 </body>
+
 </html>

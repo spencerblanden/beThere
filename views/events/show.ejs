@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/head.ejs')%>
-    <title>Document</title>
+    <title><%= event.name %></title>
 </head>
-    <%- include('../partials/header.ejs')%>
-    <body class= 'bg-img'>
-        <div class="hero is-fullheight is-primary has-background">
-            <img alt="filler" class="hero-background " src="/bg.png" />
-            <div class="hero-body">
-              <div class="container">
-    <div class='columns is-centered'>
-        <div class='column is-centered ml-6'>
-           
-            <div class='is-size-1 my-3'>  <%= event.name  %> </div>
-            <div class='title'> At:  <%= place.name %></div>
-            <div class='subtitle mt-6'>Location:  <%= place.address %> </div>
-            <div class='subtitle'>Time:  <%= event.time %></div>
-            <div class='subtitle'>Day:  <%= event.day %></div>
-          
-           
-        </div>
-        <div class='column mr-6 is-centered'>
-            <div class='card'><img src="<%=place.img%>" alt="">  </div>
-            
-            </form></div>
-        </div>
-        <div class='columns'>
-           
-        </div>
-    </div>
-              </div>
+<%- include('../partials/header.ejs')%>
+
+<body class='bg-img has-navbar-fixed-top'>
+    <div class="hero is-fullheight is-primary has-background">
+        <img alt="filler" class="hero-background " src="/bg.png" />
+        <div class="hero-body">
+            <div class="container">
+                <div class='columns is-centered'>
+                    <div class='column is-centered ml-6'>
+
+                        <div class='is-size-1 my-3'> <%= event.name  %> </div>
+                        <div class='title'> At: <%= place.name %></div>
+                        <div class='subtitle mt-6'>Location: <%= place.address %> </div>
+                        <div class='subtitle'>Time: <%= event.time %></div>
+                        <div class='subtitle'>Day: <%= event.day %></div>
+
+
+                    </div>
+                    <div class='column mr-6 is-centered'>
+                        <div class='card'><img src="<%=place.img%>" alt=""> </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class='columns'>
+
+                </div>
             </div>
         </div>
-        
+    </div>
+    </div>
+
 </body>
+
 </html>

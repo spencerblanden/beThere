@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/head.ejs')%>
-    <title>Document</title>
+    <title>Sign-Up</title>
 </head>
-<body>
-    <%- include('../partials/header.ejs')%>
-    <div class='column has-text-centered is-centered'>
-    <h1 class='title'>Signup</h1>
-    <p>Please Enter A Username and Password to Join</p>
-    <form class='subtitle'action="/user/signup" method="POST" autocomplete="off">
-        <label>Username:
-            <input type="text" name="username" required>
-        </label><br>
-        <label>Password:
-            <input type="password" name="password" required>
-        </label><br>
-        <input type="submit" value="Sign Up">
-    </form>
-</div>
+<%- include('../partials/header.ejs')%>
+
+<body class='bg-img has-navbar-fixed-top'>
+    <div class="hero is-fullheight is-primary has-background">
+        <img alt="filler" class="hero-background " src="/bg.png" />
+        <div class="hero-body">
+            <div class="container ">
+
+                <div class='columns is-centered'>
+                    <div class='column is-centered is-half has-text-centered'>
+                        <div class='card pb-2'>
+                            <div>
+                                <div class='control has-text-centered'>
+                                    <h1 class='title has-text-dark pt-2'>Sign-Up</h1>
+                                    <div class='is-size-5'>Enter a Username & <br />Password to Join</div>
+                                    <form class='subtitle' action="/user/signup" method="POST" autocomplete="off">
+                                        <input class='input' placeholder="username" type="text" name="username"
+                                            required /><br />
+                                        <div class='block my-2'></div>
+                                        <input class='input' placeholder="password" type="password" name="password"
+                                            required /><br />
+                                        <div class='block my-2'></div>
+                                        <input class='button is-success' type="submit" value="Sign-Up" />
+                                        <div class='block my-2'></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

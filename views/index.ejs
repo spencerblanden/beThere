@@ -1,79 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <title>Document</title>
+    <title>BeThere</title>
 </head>
 
-    <%- include('./partials/header.ejs')%>
-    <body class= 'bg-img'>
-        <div class="hero is-fullheight is-primary has-background">
-            <img alt="filler" class="hero-background " src="/bg.png" />
-            <div class="hero-body">
-              <div class="container">
-     <main >
-        <section id='hero'class="hero is-medium is-link mb-5">
-            <div class="hero-body" id='hero-text'>
-              <p class="title" class='hero-text'>
-                Wanna Hang?
-              </p> 
-              <br />
-              <p class="subtitle" class='hero-text'>
-                At your favorite place?
-              </p>
-            </div>
-            
-        </section>
-        <section class='has-text-centered'>
-        <div class='columns'>
-            <div class='column'>
-            <a href='/user/signup' class="button is-large is-primary is-centered">Sign-up to connect now</a>
-        </div>
-            <div class='column'>
-            <a href='/user/login'class="button is-large is-primary is-centered ">Login if you're a member</a>
-        </div>
-    </div>
-</section>
-<div class='columns'>
-        <div class='has-text-centered'>
-            <div class='column is-half'>
-                
-                <figure id='hero' class="image m-auto">
-                    <img src="/connect.jpg" alt="Image">
-                  </figure>
-            </div>
-            <div class='column is-half has-text-centered'>
-                <div class="columns">
-                <div class="box column is-inline">
-                    <article class="media">
-                        <div class="content">
-                          <p >
-                            <strong class='is-size-1'>Be There</strong>
-                            <br>
-                        </p>
-                        <p class ='is-size-3 has-text-right'>
-                            or be squared 
-                        </p>
+<%- include('./partials/header.ejs')%>
+
+<body class='bg-img has-navbar-fixed-top'>
+    <div class="hero is-fullheight is-primary has-background">
+        <img alt="filler" class="hero-background " src="/bg.png" />
+        <div class="hero-body">
+            <div class="container">
+               
+                    <div id='card-hero' class="card is-horizontal columns mx-auto">
+                        <div class="card-content column is-two-fifths mx-auto" >
+                            <p class="is-size-2 mt-6 has-text-dark" class='hero-text'>
+                                Wanna Hang?
+                            </p>
+                            <br />
+                            <p class="is-size-4 has-text-dark" class='hero-text'>
+                                At your favorite place?
+                            </p>
+                            <div class=' my-6'>
+                                <a href='/places' class="button is-danger is-centered">Check out some places.
+                                    </a>
+                            </div>
                         </div>
-                        
-                    </article>
+                        <div class='card-image column is-three-fifths'>
+                            <figure id='hero' class="image is 4by3 m-auto">
+                                <img src="/connect.jpg" alt="Image">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class='block my-6'></div>
+                    <div class='columns'>
+                        <div class='block my-6'></div>
+                            <div class='column my-6 is-half has-text-centered'>
+                                <a href='/user/signup' class="button is-large is-primary is-centered">Sign-up to connect
+                                    now</a>
+                            </div>
+                            <div class='block my-6'></div>
+                            <div class='column my-6 is-half has-text-centered'>
+                                <a href='/user/login' class="button is-large is-primary is-centered ">Login if you're a
+                                    member</a>
+                            </div>
                 </div>
-                  </div>
+            </div>
+                    
+                        
+                    
+
+            
+
             </div>
         </div>
-        </div>
-
-    </main>
-
     </div>
-            </div>
-        </div>
-        
+
 
 
 </body>
+
 </html>

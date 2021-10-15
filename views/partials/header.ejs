@@ -1,39 +1,38 @@
-<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
-    
+<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+
     <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="/bethere.png"  >
-      </a>
-  
-      <a role="button" class="navbar-burger " aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+        <a class="navbar-item" href="/">
+            <img src="/bethere.png">
+        </a>
+
+        <a role="button" class="navbar-burger " aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
+            onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
     </div>
-  
-    <div id="navbarBasicExample" class="navbar-menu" class="navbar-start">
-        <a class="navbar-item has-text-dark" href='/'>
-          Home
-        </a>
-  
-        <a class="navbar-item has-text-dark" href='/places'>
-          places
-        </a>
-  
-          <% if(user) { %>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+
+            <a class="navbar-item has-text-dark" href='/places'>
+                Places
+            </a>
+
+            <% if(user) { %>
             <a href="/user/logout" class="navbar-item has-text-dark">
-               logout
-              </a>
-        <% } else { %>
-            <a href="/user/login"class="navbar-item has-text-dark">
-                login
+                Logout
+            </a>
+            <% } else { %>
+            <a href="/user/login" class="navbar-item has-text-dark">
+                Login
             </a>
             <a href="/user/signup" class="navbar-item has-text-dark">
-                Sign up
+                Sign-up
             </a>
-        <% } %>
-  
-      </div>
-    
-  </nav>
+            <% } %>
+        </div>
+    </div>
+
+</nav>
