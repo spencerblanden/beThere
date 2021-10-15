@@ -14,18 +14,19 @@
          
 <div class='columns'>
     <div class='column'>
-        <div class='is-size-1 my-3'> <%=place.name %> </div>
+        <div class='is-size-1'> <%=place.name %> </div>
         <div class='subtitle '><%=place.description %></div>
         <div class='subtitle mt-6'>Location: <%=place.address %> </div>
-        <div class='subtitle'>Tags:<%=place.tags %></div>
+        <div class='block my-6'></div>
         <div class='columns'> 
         <div class='column  '>
             <div id='card-place'><img src="<%=place.img %>" alt="">  </div>
-           
+            
         </div>
     </div>
     </div>
         <div class='column'>
+            
                <div class="is-size-1">Events:</div>
                <% const ev = place.events %>
             <%Array.from(place.events).forEach((e,id) => { %>
