@@ -13,9 +13,9 @@ Have you ever wanted to go a local spot and see some familiar faces but when you
 - Bcrypt
 
 # Screenshots
-![screenshot1](/public/screenshot1.png)
-![screenshot2](/public/screenshot2.png)
-![screenshot3](/public/screenshot3.png)
+![screenshot1](/public/Screenshot1.png)
+![screenshot2](/public/Screenshot2.png)
+![screenshot3](/public/Screenshot3.png)
 
 # Getting Started
 [Click here](https://betherebesquare.herokuapp.com/) to see the deployed project. Sign-up for a username and get started.
