@@ -34,10 +34,13 @@ a {
 }
 
 #hero-text {
-    color: black;
+    color: whitesmoke;
     opacity: 1.0;
 }
-
+.hero-text{
+    color:whitesmoke !important;
+    text-align: center;
+}
 .input {
     max-width: 300px;
 }
@@ -83,4 +86,15 @@ a {
 
 #card-hero {
     max-width: 1000px;
+    background-color: rgb(35 33 38);
+    
+}
+
+.dark{
+    background-color: rgb(35 33 38);
+}
+
+.herobutton{
+    display: flex;
+    justify-content: center;
 }
